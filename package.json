@@ -1,0 +1,43 @@
+{
+  "name": "smart-taxi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "npm run test:unit",
+    "test:unit": "node --test test/dispatch.test.js test/notification.test.js",
+    "test:integration": "node --test test/integration/databaseSafety.test.js test/integration/infrastructureRegression.test.js test/appImport.test.js",
+    "test:integration:connection": "node --test test/integration/connection.test.js",
+    "test:integration:schema": "node test/integration/schemaSetup.js",
+    "test:integration:auth": "node --test test/integration/auth.test.js",
+    "test:integration:car": "node --test test/integration/car.test.js",
+    "test:integration:ride": "node --test test/integration/ride.test.js",
+    "test:integration:socket": "node --test test/integration/socketRideOffers.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.1",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.5",
+    "sequelize": "^6.37.8",
+    "socket.io": "^4.8.4",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1",
+    "umzug": "^3.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "socket.io-client": "^4.8.4"
+  }
+}
